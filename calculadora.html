@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Calculadora en Brython</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/business-frontpage.css" rel="stylesheet">
+  <!--Hoja de estilo de la calculadora  -->
+  <link href="css/style.css" rel="stylesheet">
+
+
+  <!--
+    Bryhton load javascript
+  -->
+  <script type="text/javascript" src="brython.js"></script>
+  <script type="text/javascript" src="brython_stdlib.js"></script>
+  <!---->
+
+</head>
+
+<!--Cargar al body brython-->
+<body onload="brython()">
+
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Brython</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--Aviso de que Brython esta listo para usarse-->
+  <script type="text/python">
+    from browser import *
+    alert("Brython listo para usarse")
+  </script>
+  <!---->
+
+  <!--
+    CALCULADORA EN BRYTHON
+    Pondremos todos los botones requeridos en la calculadora.
+    Números (0-9)
+    Operaciones: Suma, resta, multiplicación, división, porcentaje,
+    elevar número al cuadrado, y calcular la raíz cuadrada.
+    Punto decimal.
+    Cambio de signo.
+    Botón para borrar una cifra (CE)
+    Inicializar la calculadora (C)
+  -->
+  <br>
+  <br>
+
+  <div class="container" style="align-items: center; align-content: center;">
+    <div id="calc">
+      <input type="text" value="0" title="" disabled />
+      <div id="main-buttons" class="button-pad">
+        <div class="row" id="row1">
+          <button class="calc2" style="color: rgb(0, 0, 0);">CE</button>
+          <button class="calc2"style="color: rgb(0, 0, 0);">C</button>
+          <button class="calc2" style="color: rgb(0, 0, 0);">+/-</button>
+        </div>
+        <div class="row">
+          <button>7</button>
+          <button>8</button>
+          <button>9</button>
+          <button class="dark">(</button>
+          <button class="dark">)</button>
+        </div>
+        <div class="row">
+          <button>4</button>
+          <button>5</button>
+          <button>6</button>
+          <button class="dark">+</button>
+          <button class="dark">-</button>
+        </div>
+        <div class="row">
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button class="dark">*</button>
+          <button class="dark">/</button>
+        </div>
+        <div class="row">
+          <button>0</button>
+          <button id="eq">=</button>
+          <button class="dark">.</button>
+          <button class="dark">x<sup>2</sup></button>
+          <button class="dark">&radic;</button>
+        </div>
+        <div class="row">
+          <button id="NotUse"></button>
+          <button id="NotUse"></button>
+          <button id="NotUse"></button>          
+          <button class="dark">&percnt;</button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Script de python que resuelve la calculadora-->
+  <script type="text/python" src="Calculadora.py"></script>
+  <!---->
+</body>
+</html>
